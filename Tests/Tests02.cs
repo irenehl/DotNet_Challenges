@@ -1,7 +1,7 @@
 ﻿using _02;
+using NUnit.Framework;
 
 namespace Tests;
-
 
 public class Tests02
 {
