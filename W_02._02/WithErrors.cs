@@ -7,7 +7,7 @@ public abstract class WithErrors
             Errors = new List<string>();
         }
 
-    protected List<string> Errors { get; set; }
+    public List<string> Errors { get; set; }
 
     public abstract bool IsValid();
 
