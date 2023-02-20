@@ -19,10 +19,12 @@ public class GenericRepository<TId> where TId : notnull
         return Db.Values.ToList();
     }
 
-    public void Add(IEntity<TId> item)
+    public IList<IEntity<TId>> GetAll(Func<IEntity<TId>, bool> predicate)
     {
-        Db.Add(item.Id, item);
+        return Db.Values.Where(predicate).ToList(); 
     }
+
+    public void Add(IEntity<TId> item) => Db.Add(item.Id, item);
 
     public void Update(TId id, IEntity<TId> values)
     {
