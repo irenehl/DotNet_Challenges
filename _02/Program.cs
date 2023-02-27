@@ -18,17 +18,18 @@
             
             foreach (var ch in str)
             {
-                if (ch == ')' && startingFlag) return false;
-
-                if (ch == '(')
+                switch (ch)
                 {
-                    opened++;
-                    startingFlag = false;
-                }
-                else if (ch == ')')
-                {
-                    closed++;
-                    startingFlag = false;
+                    case ')' when startingFlag:
+                        return false;
+                    case '(':
+                        opened++;
+                        startingFlag = false;
+                        break;
+                    case ')':
+                        closed++;
+                        startingFlag = false;
+                        break;
                 }
             }
 
