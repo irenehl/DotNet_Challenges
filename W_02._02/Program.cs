@@ -9,7 +9,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        var user = new User(12);
+        var user = new User(13, false);
 
         Console.WriteLine("Is Valid: " + user.IsValid());
         Console.WriteLine("Has errors: " + user.HasErrors());

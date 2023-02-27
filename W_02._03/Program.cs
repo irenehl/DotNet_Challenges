@@ -6,7 +6,7 @@ namespace W_02._03
     {
         static void Main(string[] args)
         {
-            var user = new User(12);
+            var user = new User(15, false);
 
             Console.WriteLine("Is Valid: " + user.IsValid());
             Console.WriteLine("Has errors: " + user.HasErrors());

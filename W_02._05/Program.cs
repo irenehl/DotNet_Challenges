@@ -42,7 +42,6 @@ namespace _05
             var eng = new Engineer(1000);
             var salesman = new Salesman(1000, 300);
             
-
             Console.WriteLine("Manager: " + manager.GetPaymentAmount());
             Console.WriteLine("Engineer: " + eng.GetPaymentAmount());
             Console.WriteLine("Salesman: " + salesman.GetPaymentAmount());
